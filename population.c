@@ -1,9 +1,14 @@
+// CONDITION:
+// We have a population of N llamas. Each year, N / 3 new llamas are born, and N / 4 llamas pass away.
+
+
+
 #include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    // TODO: Prompt for start size
+    // Prompt for start size
     int start;
     do
     {
@@ -11,16 +16,15 @@ int main(void)
     }
     while (start < 9);
 
-    // TODO: Prompt for end size
+    // Prompt for end size
     int end;
     do
     {
        end = get_int("End size: ");
     }
     while (end < start);
-    
-
-    // TODO: Calculate number of years until we reach threshold
+   
+    // Calculate number of years until we reach threshold
     int years = 0;
     for(int i=0; i<=years & start<end; i++)
     {
@@ -28,7 +32,7 @@ int main(void)
     start = start + (start / 3) - (start / 4);
     }
 
-    // TODO: Print number of years
+    // Print number of years
     printf("Years: %i\n", years);
 
 }
